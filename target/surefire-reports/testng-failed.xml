@@ -3,6 +3,13 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
+      <class name="TestCase.Product">
+        <methods>
+          <include name="TestCase_003"/>
+          <include name="setUp"/>
+          <include name="TearDown"/>
+        </methods>
+      </class> <!-- TestCase.Product -->
       <class name="TestCase.Login">
         <methods>
           <include name="setUp"/>

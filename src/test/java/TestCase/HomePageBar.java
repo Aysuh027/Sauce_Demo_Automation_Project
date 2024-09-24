@@ -33,7 +33,7 @@ public class HomePageBar extends TestBase {
 		home.ClickMenuButton();
 
 		Thread.sleep(1000);
-		boolean actualResult = driver.findElement(By.xpath("//nav[@class='bm-item-list']")).isDisplayed();
+		boolean actualResult = home.GetMenuList();
 		boolean expectedresult = true;
 		Assert.assertEquals(actualResult, expectedresult);
 		System.out.println(actualResult);
@@ -85,7 +85,7 @@ public class HomePageBar extends TestBase {
 
 		Thread.sleep(1000);
 
-		String actualResult = driver.findElement(By.xpath("//div[@class='login_logo']")).getText();
+		String actualResult  = home.GetLoginLogo();
 		String expectedResult = "Swag Labs";
 		Assert.assertEquals(actualResult, expectedResult);
 		System.out.println(actualResult);
@@ -113,10 +113,10 @@ public class HomePageBar extends TestBase {
 		LoginPage login = new LoginPage(driver);
 		HomePage home = new HomePage(driver);
 		login.LoginSauceDemo("standard_user", "secret_sauce");
-		home.ClickAddCartButton();
+		home.ClickAddCartButton_1();
 		Thread.sleep(1000);
 
-		String actualResult = driver.findElement(By.className("shopping_cart_badge")).getText();
+		String actualResult = home.GetShoppingItemCount();
 		String expectedResult = "1";
 		Assert.assertEquals(actualResult, expectedResult);
 		System.out.println(actualResult);

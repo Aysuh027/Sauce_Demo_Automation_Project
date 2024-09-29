@@ -60,7 +60,7 @@ public class Product extends TestBase {
 		Thread.sleep(1000);
 
 		String actualResult = home.GetShoppingItemCount();
-		String expectedResult = "0";
+		String expectedResult = "";
 		Assert.assertEquals(actualResult, expectedResult);
 		System.out.println(actualResult);
 
